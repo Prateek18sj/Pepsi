@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* body{
+  background-image: url(images/bg.png);
+}
+Agar me body me dalunga background-image to mujhe unke jesa background to mil jayega lekin
+nahi samjh aarha ki unhone esa kyo nahi kiya hai? */
+
+.container{
+  height: 100vh;
+  width: 100%;
+  /* NOTE: height 100vh means 100% of the height of the viewport but agar ham sirf
+  100% likhenge height me to it will interpret it as the 100% height of the block
+  and which in this case is div so it will not take the whole size of the viewport. */
+  background-image: url(images/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 5%;
+  padding-right: 3%;
+  box-sizing: border-box;
+  /* NOTE:padding right aur left when combined with box-sizing:border-box will not increase
+  the size of the boxx in which they are in.*/
+  position: relative;
+}
+
+
+/* HEADER SECTION */
+
+.header{
+  width: 100%;
+  height: 15vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+   width: 80px;
+   margin-top: 10px;
+   cursor: pointer;
+}
+
+nav{
+  flex:1;
+  padding-left: 450px;
+  /* NOTE: flex:1 is pretty confusing, I don't know how the logIn and SignUp are
+  getting attached together by this.
+  But there is one more thing we can do to acheive pretty much the same thing as this,
+  which is by justify-content:space-between -> this will justify the content
+  and give them equal spacing between each other, we will just have to create
+  one more div for button, becasue otherwise it will consider three elements and
+  give them space, nav, btn1 and btn2... so we can create one div for button
+  so that it will have to give space to only two of the elements, which is all we want.
+  */
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#btn1{
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #378de5 3%, #48789b 100%);
+  border-radius: 30px;
+  border: 1px solid #5e97d1;
+  cursor: pointer;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px 20px;
+  margin: 10px;
+  box-shadow: 1px 4px 12px rgba(94,28,68,.15);
+  text-shadow: 0 1px 0 #528ecc;
+}
+
+#btn2{
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #cbcbcb 2%, #fff 100%);
+  border-radius: 30px;
+  border: 1px solid #cbcbcb;
+  cursor: pointer;
+  color: #5e97d1;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px 20px;
+  margin: 10px;
+  box-shadow: 1px 4px 12px rgba(94,28,68,.15);
+  text-shadow: 0 1px 0 #cbcbcb;
+}
+
+ .button:hover{
+   box-shadow: 3px 8px 22px rgba(94, 28, 68, 0.263);
+   transform: scale(1.1);
+   transition: .2s ease-in-out;
+}
+
+.content{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content text{
+  position: relative;
+  max-width: 600px;
+}
+
+.content .text h1{
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  line-height: 3.5rem;
+  letter-spacing: .1rem;
+  font-size: 40px;
+}
+
+.content .text h1 span{
+  font-size: 50px;
+}
+
+.content .text p{
+  font-size: 17px;
+  font-weight: 600px;
+  letter-spacing: .1rem;
+  color: #e7e3e3;
+}
+
+.btn3{
+  background: linear-gradient(to bottom, 
+  #cbcbcb 2%, 
+  #fff 100% );
+  margin-top: 60px;
+  margin-left: 140px;
+  padding: 15px 30px;
+  text-align: center;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: #1b1b1b;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 30px;
+  box-shadow: 1px 4px 12px rgba(94,28,68,.15);
+}
+
+
+.pepsi{
+  display: flex;
+  height: 400px;
+  position: absolute;
+  width: 600px;
+  margin-top: 80px;
+  padding-left: 440px;
+  justify-content: flex-end;
+  top: 20px;
+  left: 140px;
+}
+
+
+/* I haven't still figured out why the hover state in the btn3 is not working properly and it 
+is not changing to pointer no what what I do. */
